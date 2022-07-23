@@ -1,0 +1,278 @@
+.admin_panel_main_div {
+    width: 100%;
+    display: flex;
+}
+
+.first_col {
+    width: 30%;
+    height: 100vh;
+    background-color: #232E33;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0) !important;
+    transition-property: all;
+    transition-duration: .2s;
+}
+
+.clip_div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(196, 164, 2);
+    clip-path: polygon(0 0, 20% 0, 80% 100%, 0% 100%);
+}
+.admin_panel_heading{
+    font-size: 35px;
+    position: absolute;
+    color: rgb(246, 231, 231);
+    top: 6%;
+    text-shadow: 0 0 30px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(0, 0, 0, 0.467);
+    line-height: 10px;
+    box-shadow: inset 0 0 10px black;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+.buttons_div {
+    z-index: 1;
+    width: 80%;
+}
+
+.buttons_div div {
+    text-align: center;
+    padding: 20px 0;
+    font-family: sans-serif;
+    cursor: pointer;
+    width: 100%;
+    color: rgb(222, 222, 222);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 5px;
+    background-color: #2d323bab;
+    box-shadow: 0 0 50px rgba(2, 2, 2, 0.629);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.active_btn {
+    background-color: black !important;
+}
+
+.second_col {
+    padding: 0px 30px;
+    width: 70%;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.search_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #232E33;
+
+}
+
+.search_div input {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 1px solid rgb(68, 68, 68);
+
+}
+
+.second_col h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: rgb(40, 40, 40);
+    text-transform: capitalize;
+    /* padding-bottom: 20px; */
+}
+
+.respondsive_menu {
+    border-bottom: 1px solid #232E33;
+    padding-bottom: 10px;
+    display: none;
+    margin-top: 30px;
+
+}
+
+.respondsive_menu :nth-child(1) {
+    color: rgb(36, 36, 36);
+}
+
+.students_list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.individual_student_head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+}
+
+.individual_student_head_first {
+    width: 10%;
+    background-color: rgb(196, 164, 2);
+    padding: 20px;
+}
+
+.individual_student_head_second {
+    width: 90%;
+    background-color: #232E33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.individual_student_head_second p {
+    margin: 0 !important;
+    padding: 20px;
+}
+
+.individual_student_head_second :nth-child(2) {
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.individual_student_data {
+    background-color: rgb(215, 215, 215);
+    margin-top: -18px;
+    padding: 20px;
+}
+
+.individual_student_data_each_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+    font-size: 17px;
+    letter-spacing: 5px;
+}
+
+.individual_student_data_each_div :nth-child(1) {
+    width: 40%;
+    font-weight: 700;
+}
+
+.individual_student_data_each_div :nth-child(2) {
+    width: 60%;
+    text-transform: capitalize;
+    margin-left: 40px;
+}
+
+#hide {
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+#show {
+    height: auto;
+    padding: 20px;
+}
+
+.responsive_cross {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: none;
+}
+
+.responsive_cross :nth-child(1) {
+    color: rgb(244, 37, 37);
+}
+
+
+
+.logout_btn{
+    padding: 10px 50px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;    
+}
+
+@media (max-width:1000px) {
+    .first_col {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    #showMenu {
+        transform: translateX(0) !important;
+    }
+
+    #hideMenu {
+        transform: translateX(-100%) !important;
+    }
+
+    .responsive_cross {
+        display: block;
+    }
+
+    .second_col {
+        padding: 0px 30px;
+        width: 100%;
+    }
+
+    .respondsive_menu {
+        display: block;
+    }
+
+}
+
+@media (max-width:750px) {
+    .search_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width:650px) {
+    .individual_student_data_each_div {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width:500px) {
+    .individual_student_data_each_div {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+    .individual_student_data_each_div :nth-child(1) {
+        width: 100%;
+    }
+    
+    .individual_student_data_each_div :nth-child(2) {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+    .individual_student_head {
+        font-size: 15px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+    }
+}

@@ -1,0 +1,149 @@
+.admit_card,.printable_admit_card{
+    width: 1000px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+.printable_admit_card{
+    display: none;
+}
+.admit_card h1,.printable_admit_card h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.photoDiv{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.photoBox{
+    width: 150px;
+    height: 150px;
+    border: 2px dashed rgb(61, 61, 61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoBox p{
+    text-align: center;
+    width: 60%;
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+}
+.userDataDiv{
+    display: flex;
+    margin-top: -20px;
+}
+.userDataDiv p{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+.userDataDiv :nth-child(1){
+    width: 200px;
+}
+.userDataDiv :nth-child(2){
+    margin-left: 50px;
+    width: 200px;
+    border-bottom: 2px solid black;
+    font-weight: 400 !important;
+}
+.main_table_div{
+    width: 100%;
+    border: 1px solid black;
+}
+/* .table_div{
+} */
+.table_div div{
+    display: flex;
+    
+}
+.table_div div div{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    border: 1px solid black;
+    width: 50%;
+    padding: 10px;
+}
+.table_div div :nth-child(2){
+    font-weight: 400;
+}
+.instructions{
+    border: 1px solid black;
+
+}
+.instructions p{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+li{
+    font-size: 17px;
+    text-indent: 20px;
+}
+
+.urdu_instructions{
+    direction: rtl;
+    text-align: right;
+    font-family: sans-serif;
+}
+.urdu_instructions li{
+    font-size: 20px !important;
+
+}
+.print_btn_div{
+    width: 100%;
+    display: flex;
+    justify-self: center;
+}
+.print_btn{
+    background-color: rgb(2, 144, 28);
+    color: white;
+    font-size: 23px;
+    font-weight: 900;
+    padding: 20px 50px;
+    border: none;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+@media print { 
+    .print_btn_div{
+        display: none;
+    }
+    .admit_card{
+        display: none;
+    }
+    .printable_admit_card{
+        display: block;
+    }
+}
+
+@media (max-width:1000px) {
+    .admit_card{
+        width: 90%;
+    }
+}
+@media (max-width:800px) {
+    .admit_card h1{
+        font-size: 20px !important;
+    }
+    .userDataDivAdmitCard{
+        margin-top: 0px;
+    }
+    .userDataDivAdmitCard p{
+        font-size: 18px !important;
+    }
+    .instructionsAdmitCard p{
+        font-size: 18px !important;
+    }
+    .instructionsAdmitCard ol li{
+        font-size: 16px !important;
+        text-indent: 0;
+    }
+    .table_div_admit_card div div{
+        font-size: 18px;
+    }
+}
