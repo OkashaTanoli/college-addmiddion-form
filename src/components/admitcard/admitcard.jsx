@@ -11,14 +11,15 @@ function Admitcard() {
     const [data, setData] = useState()
     const [load, setLoad] = useState(true)
     let { id } = useParams();
-    
+
     let group = id > 0 && id <= 150 ? 'medical' : id > 150 && id <= 300 ? 'eng' : id > 300 && id <= 400 ? 'ics' : id > 400 && id <= 450 ? 'arts' : ''
     useEffect(() => {
         onValue(ref(db, `fg_boys_inter_college/federal_board/${group}/students/${id}`), (snapshot) => {
             setData(snapshot.val())
             setLoad(false)
         }, { onlyOnce: true })
-    }, [])
+    },[group,id])
+    console.log(data)
     if (load) {
         return (
             <div className='loader_div'>

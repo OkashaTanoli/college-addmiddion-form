@@ -77,13 +77,13 @@ function Adminpanel() {
                 <div className='students_list'>
                     {
                         data.filter((val) => {
-                            if (search === '') {
-                                return val
-                            }
-                            else if (String(val.serial_no).includes(search)) {
-                                return val
-                            }
-                            return;
+                            return search === '' || String(val.serial_no).includes(search) && val
+                            // if (search === '') {
+                            //     return val
+                            // }
+                            // else if (String(val.serial_no).includes(search)) {
+                            //     return val
+                            // }
                         }).map((val, index) => {
                             return (
 
