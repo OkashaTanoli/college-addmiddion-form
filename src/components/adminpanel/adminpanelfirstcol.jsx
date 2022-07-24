@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './adminpanel.css'
 import { MdOutlineCancel } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 
 
+
 function Adminpanelfirstcol({ group, setGroup, menu, setMenu }) {
     let navigate = useNavigate();
+
+    // useEffect(() => {
+    //     onValue(ref(db, `fg_boys_inter_college/federal_board/${group}/students`), (snapshot) => {
+
+    //     })
+    // },[])
 
     const Logout = () => {
         navigate('/login', { replace: true })
         localStorage.removeItem('login');
 
     }
+   
 
     return (
         <div className='first_col' id={menu ? 'showMenu' : 'hideMenu'}>

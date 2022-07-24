@@ -100,7 +100,6 @@
     padding-bottom: 10px;
     display: none;
     margin-top: 30px;
-
 }
 
 .respondsive_menu :nth-child(1) {
@@ -209,6 +208,14 @@
     cursor: pointer;    
 }
 
+
+.csvLink :nth-child(1){
+    color: rgb(0, 120, 32);
+}
+.csvLinkMenu{
+    display: none;
+}
+
 @media (max-width:1000px) {
     .first_col {
         position: absolute;
@@ -236,7 +243,10 @@
 
     .respondsive_menu {
         display: block;
+        display: flex;
+        justify-content: space-between;
     }
+    
 
 }
 
@@ -246,6 +256,12 @@
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 20px;
+    }
+    .csvLinkMenu{
+        display: block !important;
+    }
+    .csvLink{
+        display: none;
     }
 }
 

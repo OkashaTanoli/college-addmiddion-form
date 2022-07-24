@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './adminpanel.css'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import { HiMenuAlt1 } from 'react-icons/hi'
+import { SiMicrosoftexcel } from 'react-icons/si'
 import { db } from '../firebase/firebase';
 import { ref, onValue, } from "firebase/database";
 import '../admitcard/loader.css'
 import Adminpanelfirstcol from './adminpanelfirstcol';
 import Datafields from './datafields';
+
+import { CSVLink, CSVDownload } from 'react-csv';
+
 
 function Adminpanel() {
 
@@ -62,16 +66,55 @@ function Adminpanel() {
         )
     }
 
+    const arrangeData = () => {
+        return data.map((val) => {
+            return {
+                serial_no: val.serial_no,
+                name: val.name,
+                fathername: val.fathername,
+                group: val.group,
+                email: val.email,
+                category: val.category,
+                sscBoard: val.sscBoard,
+                sscMarks: val.sscMarks,
+                sscPercentage: val.sscPercentage,
+                sscYear: val.sscYear,
+                dateOfBirth: val.DOB,
+                whatsapp: val.whatsapp,
+                address: val.address
+            }
+        })
+    }
+
+    let headers = [
+        { label: 'Serial No', key: 'serial_no' },
+        { label: 'Name', key: 'name' },
+        { label: 'Father Name', key: 'fathername' },
+        { label: 'Group', key: 'group' },
+        { label: 'Email', key: 'email' },
+        { label: 'Category', key: 'category' },
+        { label: 'SSC Board', key: 'sscBoard' },
+        { label: 'SSC Marks', key: 'sscMarks' },
+        { label: 'SSC Percentage', key: 'sscPercentage' },
+        { label: 'SSC Year', key: 'sscYear' },
+        { label: 'Date Of Birth', key: 'dateOfBirth' },
+        { label: 'WhatsApp', key: 'whatsapp' },
+        { label: 'Address', key: 'address' },
+    ];
     return (
         <div className='admin_panel_main_div'>
             <Adminpanelfirstcol group={group} setGroup={setGroup} menu={menu} setMenu={setMenu} />
             <div className='second_col'>
                 <div className='respondsive_menu'>
                     <HiMenuAlt1 size={30} onClick={() => { setMenu(true) }} />
+                    <CSVLink className='csvLink csvLinkMenu' data={arrangeData()} headers={headers} filename={`${group}_students_data.csv`} ><SiMicrosoftexcel size={40} /></CSVLink>
+
                 </div>
                 <div className='search_div'>
                     <h2> {group} Students List</h2>
                     <input type="text" placeholder='filter by ID' onChange={(e) => { setSearch(String(e.target.value)) }} />
+                    <CSVLink className='csvLink' data={arrangeData()} headers={headers} filename={`${group}_students_data.csv`} ><SiMicrosoftexcel size={40} /></CSVLink>
+
                 </div>
 
                 <div className='students_list'>
