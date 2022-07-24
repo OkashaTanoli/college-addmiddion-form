@@ -26,7 +26,7 @@ function Adminpanelfirstcol({ group, setGroup, menu, setMenu }) {
                 <div className={group === 'ics' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('ics') }}>ICS</div>
                 <div className={group === 'arts' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('arts') }}>Arts</div>
             </div>
-            <h2 className='logout_btn' onClick={() => { Logout() }}>Logout</h2>
+            <h2 className='logout_btn' onClick={() => { Logout() }}>Log out</h2>
         </div>
     );
 }
