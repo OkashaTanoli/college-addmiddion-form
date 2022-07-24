@@ -77,7 +77,7 @@ function Adminpanel() {
                 <div className='students_list'>
                     {
                         data.filter((val) => {
-                            return search === '' || String(val.serial_no).includes(search) && val
+                            return (search === '' || String(val.serial_no).includes(search)) && val
                             // if (search === '') {
                             //     return val
                             // }
