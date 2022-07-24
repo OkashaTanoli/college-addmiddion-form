@@ -1,4 +1,4 @@
-import { ref, set, onValue, get } from "firebase/database";
+import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase/firebase";
 
 

@@ -14,7 +14,7 @@ function Login(props) {
     const [pass, setPass] = useState('')
     const [load, setLoad] = useState(false)
     const [err, setErr] = useState(false)
-    
+
     const Login = (e) => {
         e.preventDefault()
         setLoad(true)
@@ -26,8 +26,8 @@ function Login(props) {
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
                 setErr(true)
                 setLoad(false)
                 setTimeout(()=>{

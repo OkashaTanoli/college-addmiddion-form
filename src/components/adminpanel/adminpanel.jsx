@@ -83,6 +83,7 @@ function Adminpanel() {
                             else if (String(val.serial_no).includes(search)) {
                                 return val
                             }
+                            return;
                         }).map((val, index) => {
                             return (
 
