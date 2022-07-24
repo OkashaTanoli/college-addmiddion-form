@@ -9,7 +9,7 @@ import '../admitcard/loader.css'
 import Adminpanelfirstcol from './adminpanelfirstcol';
 import Datafields from './datafields';
 
-import { CSVLink, CSVDownload } from 'react-csv';
+import { CSVLink } from 'react-csv';
 
 
 function Adminpanel() {
