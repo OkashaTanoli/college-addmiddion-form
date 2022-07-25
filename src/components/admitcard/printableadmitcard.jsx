@@ -27,6 +27,14 @@ function PrintableAdmitcard({ data }) {
                         <p>Category :</p>
                         <p>{data.category} </p>
                     </div>
+                    <div className='userDataDiv'>
+                        <p>Group :</p>
+                        <p>{data.group}</p>
+                    </div>
+                    <div className='userDataDiv'>
+                        <p>Board :</p>
+                        <p>{data.sscBoard}</p>
+                    </div>
                 </div>
                 <div className='main_table_div'>
                     <div className='table_div'>

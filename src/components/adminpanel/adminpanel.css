@@ -54,7 +54,7 @@
     font-weight: 800;
     letter-spacing: 5px;
     background-color: #2d323bab;
-    box-shadow: 0 0 50px rgba(2, 2, 2, 0.629);
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.331);
     backdrop-filter: blur(10px);
     margin-bottom: 20px;
 }
@@ -67,7 +67,7 @@
     padding: 0px 30px;
     width: 70%;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
