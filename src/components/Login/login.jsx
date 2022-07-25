@@ -16,10 +16,13 @@ function Login() {
     const [err, setErr] = useState(false)
 
     useEffect(() => {
-        if (localStorage.getItem('login')) {
-            navigate('/adminpanel', { replace: true })
-            return;
+        const CheckLoginState = ( ) =>{
+            if (localStorage.getItem('login')) {
+                navigate('/adminpanel', { replace: true })
+                return;
+            }
         }
+        CheckLoginState()
     }, [])
     
     const Login = (e) => {

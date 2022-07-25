@@ -10,7 +10,6 @@ import Adminpanelfirstcol from './adminpanelfirstcol';
 import Datafields from './datafields';
 import { useNavigate } from "react-router-dom";
 import { CSVLink } from 'react-csv';
-import { getAuth } from "firebase/auth";
 
 
 
