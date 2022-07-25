@@ -53,7 +53,7 @@ function MainForm() {
                 <input type='number' id="phoneNumber" placeholder="Enter your Whatsapp Number" required value={whatsapp} onChange={(e) => { setWhatsapp(e.target.value) }} />
 
                 <label htmlFor="dob">Date of Birth<span className="asteric">*</span></label>
-                <input type="date" id="dob" required min="1985-01-01" max="2030-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value={DOB} onChange={(e) => { setDOB(e.target.value) }} />
+                <input type="date" id="dob" required  max="2005-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value={DOB} onChange={(e) => { setDOB(e.target.value) }} />
                 {/* <!--pattern="\d{4}-\d{2}-\d{2}"--> */}
 
                 {/* <div className="padding">
