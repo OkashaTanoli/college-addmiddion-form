@@ -10,6 +10,8 @@ import Adminpanelfirstcol from './adminpanelfirstcol';
 import Datafields from './datafields';
 import { useNavigate } from "react-router-dom";
 import { CSVLink } from 'react-csv';
+import { getAuth } from "firebase/auth";
+
 
 
 function Adminpanel() {
@@ -32,6 +34,7 @@ function Adminpanel() {
             setLoad(false)
         }, { onlyOnce: true })
     }, [group])
+
 
     if (!localStorage.getItem('login')) {
         navigate('/login', { replace: true })
@@ -102,7 +105,7 @@ function Adminpanel() {
         <div className='admin_panel_main_div'>
             <Adminpanelfirstcol group={group} setGroup={setGroup} menu={menu} setMenu={setMenu} />
             <div className='second_col'>
-                <div style={{fontSize:"15px",textAlign:'center',padding:'10px',backgroundColor:'black',color:'white'}}>Developed and Designed by <a href='https://okasha-tanoli-portfolio.surge.sh/' target="__blank">Okasha Aijaz</a></div>
+                <div style={{ fontSize: "15px", textAlign: 'center', padding: '10px', backgroundColor: 'black', color: 'white' }}>Developed and Designed by <a href='https://okasha-tanoli-portfolio.surge.sh/' target="__blank">Okasha Aijaz</a></div>
                 <div className='respondsive_menu'>
                     <HiMenuAlt1 size={30} onClick={() => { setMenu(true) }} />
                     <CSVLink className='csvLink csvLinkMenu' data={arrangeData()} headers={headers} filename={`${group}_students_data.csv`} ><SiMicrosoftexcel size={40} /></CSVLink>

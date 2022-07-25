@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './login.css'
 import '../admitcard/loader.css'
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -6,7 +6,7 @@ import { auth } from '../firebase/firebase';
 import { useNavigate } from "react-router-dom";
 
 
-function Login(props) {
+function Login() {
 
     let navigate = useNavigate();
 
@@ -15,6 +15,13 @@ function Login(props) {
     const [load, setLoad] = useState(false)
     const [err, setErr] = useState(false)
 
+    useEffect(() => {
+        if (localStorage.getItem('login')) {
+            navigate('/adminpanel', { replace: true })
+            return;
+        }
+    }, [])
+    
     const Login = (e) => {
         e.preventDefault()
         setLoad(true)
@@ -30,11 +37,12 @@ function Login(props) {
                 // const errorMessage = error.message;
                 setErr(true)
                 setLoad(false)
-                setTimeout(()=>{
+                setTimeout(() => {
                     setErr(false)
-                },2000)
+                }, 2000)
             });
     }
+
     return (
         <div className='container'>
             <div className='clip_path'></div>
@@ -48,7 +56,7 @@ function Login(props) {
                     <button>{load ? <div class="loader2"></div> : 'LOGIN'}</button>
                     {
                         err &&
-                        <p style={{color:'red',textAlign:'center'}}>email or password is wrong</p>
+                        <p style={{ color: 'red', textAlign: 'center' }}>email or password is wrong</p>
                     }
                 </form>
             </div>
