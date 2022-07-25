@@ -8,13 +8,13 @@ import { ref, onValue, } from "firebase/database";
 import '../admitcard/loader.css'
 import Adminpanelfirstcol from './adminpanelfirstcol';
 import Datafields from './datafields';
-
+import { useNavigate } from "react-router-dom";
 import { CSVLink } from 'react-csv';
 
 
 function Adminpanel() {
 
-
+    let navigate = useNavigate();
 
     const [show, setShow] = useState(false)
     const [active, setActive] = useState()
@@ -34,11 +34,8 @@ function Adminpanel() {
     }, [group])
 
     if (!localStorage.getItem('login')) {
-        return (
-            <div className='loader_div'>
-                <h1>Page Not Found</h1>
-            </div>
-        )
+        navigate('/login', { replace: true })
+        return;
     }
 
     if (load) {
