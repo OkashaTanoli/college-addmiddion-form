@@ -9,12 +9,12 @@ import { useNavigate } from "react-router-dom";
 function Login() {
 
     let navigate = useNavigate();
-
+    
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [load, setLoad] = useState(false)
     const [err, setErr] = useState(false)
-
+    
     useEffect(() => {
         const CheckLoginState = ( ) =>{
             if (localStorage.getItem('login')) {
@@ -23,7 +23,7 @@ function Login() {
             }
         }
         CheckLoginState()
-    }, [])
+    }, [navigate])
     
     const Login = (e) => {
         e.preventDefault()
