@@ -141,7 +141,7 @@ function MainForm() {
             </form>
             <div style={{ fontSize: "16px", textAlign: 'center', padding: '20px 0', backgroundColor: 'black', color: 'white', width: '100%' }}>
                 <p>Developed by <a href='https://okasha-tanoli-portfolio.surge.sh/' target="__blank">Okasha Aijaz</a></p>
-                <p>Designed by <a href='https://www.facebook.com/3shehzad3' target="__blank">Shehzad Iqbal</a></p>
+                <p>Designed by <a href='https://instagram.com/shehza.d' target="__blank">Shehzad Iqbal</a></p>
             </div>
 
         </div>
