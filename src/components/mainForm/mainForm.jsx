@@ -79,9 +79,9 @@ function MainForm() {
                 <label htmlFor="form_ssc_board">SSC/Matriculation Board<span className="asteric">*</span> </label>
                 <select name="form_ssc_passYear" value={sscBoard} onChange={(e) => { setSscBoard(e.target.value) }}>
                     <option value="0" defaultChecked>Select Board</option>
-                    <option value="fb">Federal Board</option>
-                    <option value="oLevel">O/A Levels</option>
-                    <option value="agaKhan">Aga Khan Board</option>
+                    <option value="Federal Board">Federal Board</option>
+                    <option value="O Level">O/A Levels</option>
+                    <option value="Aga Khan">Aga Khan Board</option>
                 </select>
 
 
@@ -109,9 +109,9 @@ function MainForm() {
                             <option value="arts">Arts </option>
                             :
                             <>
-                                <option value="ics">Computer Science </option>
-                                <option value="eng">Pre Engineering </option>
-                                <option value="medical">Pre Medical </option>
+                                <option value="ICS">Computer Science </option>
+                                <option value="Engineering">Pre Engineering </option>
+                                <option value="Medical">Pre Medical </option>
                             </>
 
                     }
