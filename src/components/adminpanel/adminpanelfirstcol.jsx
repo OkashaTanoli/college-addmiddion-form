@@ -30,7 +30,7 @@ function Adminpanelfirstcol({ group, setGroup, menu, setMenu }) {
             <h1 className='admin_panel_heading'>Admin Panel</h1>
             <div className='buttons_div'>
                 <div className={group === 'medical' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('medical') }}>Medical</div>
-                <div className={group === 'eng' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('eng') }}>Engineering</div>
+                <div className={group === 'engineering' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('engineering') }}>Engineering</div>
                 <div className={group === 'ics' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('ics') }}>ICS</div>
                 <div className={group === 'arts' ? 'active_btn' : ''} onClick={() => { setMenu(false); setGroup('arts') }}>Arts</div>
             </div>
