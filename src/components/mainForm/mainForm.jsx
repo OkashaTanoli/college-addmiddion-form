@@ -106,7 +106,7 @@ function MainForm() {
                     <option value="0" defaultChecked>Select Group for (XI) </option>
                     {
                         sscPercentage < 60 ?
-                            <option value="arts">Arts </option>
+                            <option value="Arts">Arts </option>
                             :
                             <>
                                 <option value="ICS">Computer Science </option>

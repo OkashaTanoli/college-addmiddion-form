@@ -47,6 +47,7 @@
     width: 200px;
     border-bottom: 2px solid black;
     font-weight: 400 !important;
+    text-transform: capitalize !important;
 }
 .main_table_div{
     width: 100%;
