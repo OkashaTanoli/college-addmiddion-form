@@ -112,6 +112,7 @@ function MainForm() {
                                 <option value="ics">Computer Science </option>
                                 <option value="engineering">Pre Engineering </option>
                                 <option value="medical">Pre Medical </option>
+                                <option value="arts">Arts </option>
                             </>
 
                     }
