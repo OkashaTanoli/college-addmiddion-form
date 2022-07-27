@@ -65,7 +65,7 @@ function Admitcard() {
                     </div>
                     <div className='userDataDiv userDataDivAdmitCard'>
                         <p>Board :</p>
-                        <p>{data.sscBoard}</p>
+                        <p>Federal Board</p>
                     </div>
                 </div>
                 <div className='main_table_div'>

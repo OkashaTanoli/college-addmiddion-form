@@ -33,7 +33,7 @@ function PrintableAdmitcard({ data }) {
                     </div>
                     <div className='userDataDiv'>
                         <p>Board :</p>
-                        <p>{data.sscBoard}</p>
+                        <p>Federal Board</p>
                     </div>
                 </div>
                 <div className='main_table_div'>
