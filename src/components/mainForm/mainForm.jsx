@@ -140,10 +140,11 @@ function MainForm() {
 
                 <p className="thin">* These fields are required.</p>
             </form>
-            <div style={{ fontSize: "16px", textAlign: 'center', padding: '20px 0', backgroundColor: 'black', color: 'white', width: '100%' }}>
-                <p>Developed by <a href='https://okasha-tanoli-portfolio.surge.sh/' target="__blank">Okasha Aijaz</a></p>
-                <p>Designed by <a href='https://instagram.com/shehza.d' target="__blank">Shehzad Iqbal</a></p>
+            <div style={{ fontSize: "16px", textAlign: 'center', padding: '10px 0', backgroundColor: 'black', color: 'white', width: '100%' }}>
+                <p><a href='https://okasha-tanoli-portfolio.surge.sh/' target="__blank" style={{marginRight:'5px',color:'white',textDecoration:'none'}}>OKASHA_TANOLI</a> copyright © 2022</p>
+                {/* <p>Designed by <a href='https://instagram.com/shehza.d' target="__blank">Shehzad Iqbal</a></p> */}
             </div>
+
 
         </div>
     );
