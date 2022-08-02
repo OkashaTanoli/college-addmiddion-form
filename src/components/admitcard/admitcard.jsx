@@ -76,7 +76,11 @@ function Admitcard() {
                         </div>
                         <div>
                             <div>Written Test Day & Date :</div>
-                            <div>Tuesday 13 July 2021</div>
+                            <div>Thursday 18 August 2022</div>
+                        </div>
+                        <div>
+                            <div>Interview Day & Date :</div>
+                            <div>Friday 19 August 2022</div>
                         </div>
                         <div>
                             <div>Reporting Time :</div>
@@ -95,7 +99,7 @@ function Admitcard() {
                             <li>NO ENTRY will be allowed without Registration Slip</li>
                             <li>Only one of the parents will be allowed to accompany the candidate</li>
                             <li>Must wear a mask</li>
-                            <li>Bring RS: 120 registration fee while coming for test </li>
+                            <li>Bring ( RS: 200 ) registration fee while coming for test </li>
                         </ol>
                         <ol className='urdu_instructions'>
                             <li>براہ کرم رجسٹریشن سلپ کا پرنٹ حاصل کریں</li>
@@ -103,7 +107,7 @@ function Admitcard() {
                             <li>رجسٹریشن سلپ کے بغیر داخلے کی اجازت نہیں ہوگی</li>
                             <li>امیدوار کہ ساتھ والدین میں سے صرف ایک فرد کو آنے کی اجازت ہوگی</li>
                             <li>ماسک لازمی پہن کر آئیں</li>
-                            <li>ٹیسٹ کے لیے آتے وقت رجسٹریشن فیس لے کر آئیں   <span>( RS: 120 )</span></li>
+                            <li>ٹیسٹ کے لیے آتے وقت رجسٹریشن فیس لے کر آئیں   <span>( RS: 200 )</span></li>
                         </ol>
                         <p>PLEASE OBSERVE COVID-19 SOPS STRICTLY</p>
                     </div>

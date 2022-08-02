@@ -73,6 +73,7 @@ function MainForm() {
                     <option value="Defence Paid">Defence Paid</option>
                     <option value="FGEI Employee">FGEI Employee</option>
                     <option value="Civilian">Civilian</option>
+                    <option value="Sports">Sports</option>
                 </select>
 
 

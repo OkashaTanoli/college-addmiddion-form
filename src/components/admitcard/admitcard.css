@@ -14,7 +14,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .photoBox{
     width: 150px;
@@ -32,7 +32,7 @@
 }
 .userDataDiv{
     display: flex;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 .userDataDiv p{
     color: black;
@@ -44,7 +44,7 @@
 }
 .userDataDiv :nth-child(2){
     margin-left: 50px;
-    width: 200px;
+    width: 250px;
     border-bottom: 2px solid black;
     font-weight: 400 !important;
     text-transform: capitalize !important;
