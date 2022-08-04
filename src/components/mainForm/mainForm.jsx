@@ -84,7 +84,8 @@ function MainForm() {
                 <input type="text" id="fatherName" placeholder="Enter your Father Name" required value={fathername} onChange={(e) => { setFathername(e.target.value) }} />
 
                 <label htmlFor="phoneNumber">WhatsApp Number<span className="asteric">*</span></label>
-                <input type='number' id="phoneNumber" placeholder="Enter your Whatsapp Number" required value={whatsapp} onChange={(e) => { setWhatsapp(e.target.value) }} />
+                <input type='tel' id="phoneNumber" placeholder="03XX-XXXXXXX" pattern="03[0-9]{2}-[0-9]{7}" required value={whatsapp} onChange={(e) => { setWhatsapp(e.target.value) }} />
+                <p className='message'>Format : 03XX-XXXXXXX</p>
 
                 <label htmlFor="dob">Date of Birth<span className="asteric">*</span></label>
                 <input type="date" id="dob" required min="2005-01-01" max="2007-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value={DOB} onChange={(e) => { setDOB(e.target.value) }} />
