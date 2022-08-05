@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './mainForm.css'
 import { submitForm } from './func';
 import { useNavigate } from "react-router-dom";
@@ -72,7 +72,12 @@ function MainForm() {
             <h3>Online Registration Form For Admission ( Only For Federal Board 2022-2023 )</h3>
 
             <form onSubmit={(e) => submitForm(e, navigate, setLoad, { name, email, fathername, whatsapp, DOB, category, sscBoard, sscMarks, sscPercentage, sscYear, group, address })}>
-                <p className='note'>NOTE: Please fill all fields carefully</p>
+                {/* <p className='note'>NOTE: Please fill all fields carefully</p> */}
+                <ol className='note'> 
+                    <li>Form should be filled once not twice.</li>
+                    <li>Provide correct information, forms with  incorrect information is liable to be rejected</li>
+                    <li>Bring photocopy of mark sheet on test day.</li>
+                </ol>
                 {/* <!-- <div className="form-group"> --> */}
                 <label htmlFor="name">Name<span className="asteric">*</span></label>
                 <input type="text" id="name" placeholder="Enter your Name" required value={name} onChange={(e) => { setName(e.target.value) }} />
@@ -88,7 +93,7 @@ function MainForm() {
                 <p className='message'>Format : 03XX-XXXXXXX</p>
 
                 <label htmlFor="dob">Date of Birth<span className="asteric">*</span></label>
-                <input type="date" id="dob" required min="2005-01-01" max="2007-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value={DOB} onChange={(e) => { setDOB(e.target.value) }} />
+                <input type="date" id="dob" required min="2002-01-01" max="2007-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value={DOB} onChange={(e) => { setDOB(e.target.value) }} />
                 {/* <!--pattern="\d{4}-\d{2}-\d{2}"--> */}
 
                 {/* <div className="padding">
