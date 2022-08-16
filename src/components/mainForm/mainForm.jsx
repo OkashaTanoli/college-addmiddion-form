@@ -51,7 +51,7 @@ function MainForm() {
             <div className='BeforeTestDiv'>
                 <h1 className='BeforeTestDivHead'>FG BOYS INTER COLLEGE KARACHI CANTT</h1>
                 <div className='BeforeTestDivCenter'>
-                    <h1>Admission Will Open On (4th August)</h1>
+                    <h1>Admission Closed</h1>
                 </div>
             </div>
         )
